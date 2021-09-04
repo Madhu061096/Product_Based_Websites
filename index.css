@@ -293,6 +293,22 @@ padding: 4vw;
         box-shadow: 0 0 50px rgba(0, 0, 0, 0.315);
         border-radius: 15px;
     }
+
+    @media (max-width: 576px){
+      .container-y {
+        background-position: center;
+        background-size: cover;
+        width: 250px;
+        height: 328px;
+        position: relative;
+        box-shadow: 0 0 50px rgb(0 0 0 / 32%);
+        border-radius: 15px;
+        align-items: center;
+        margin: 8vw;
+   }}
+
+
+   
     .container-y .container__profile {
         background-color: rgb(2, 2, 68);
         display: flex;
