@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,500&display=swap"> -->
+    <link href="//db.onlinewebfonts.com/c/f867300bdd5bc759c50209b13c385cb1?family=Schluber" rel="stylesheet"
+        type="text/css" />
+    <link href="dm-sans-cufonfonts/DMSans-Bold.ttf" rel="stylesheet">
+    <link href="dm-sans-cufonfonts/DMSans-BoldItalic.ttf" rel="stylesheet">
+    <link href="dm-sans-cufonfonts/DMSans-Italic.ttf" rel="stylesheet">
+    <link href="dm-sans-cufonfonts/DMSans-Medium.ttf" rel="stylesheet">
+    <link href="dm-sans-cufonfonts/DMSans-MediumItalic.ttf" rel="stylesheet">
+    <link href="dm-sans-cufonfonts/DMSans-Regular.ttf" rel="stylesheet">
+    <!-- <link href="FontAwesome.css" rel="stylesheet"> -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="blog.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- ------JAVASCRIPT LINKS-------- -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        /* Font */
+        @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+        /* Design */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+/* 
+        html {
+            background-color: #FDFAFA;
+        }
+
+        body {
+            color: #272727;
+            font-family: 'Quicksand', serif;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 0;
+            padding: 1rem;
+        } */
+
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        img {
+            height: auto;
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        .btn {
+            color: #ffffff;
+            padding: 0.8rem;
+            font-size: 14px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            font-weight: 400;
+            display: block;
+            width: 100%;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: transparent;
+        }
+
+        .btn:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .cards {
+            display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 11vw;
+    padding: 0;
+        }
+
+        .cards_item {
+            display: flex;
+            padding: 1rem;
+        }
+
+        @media (min-width: 40rem) {
+            .cards_item {
+                width: 50%;
+            }
+        }
+
+        @media (min-width: 56rem) {
+            .cards_item {
+                width: 49.3333%;
+            }
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 0.25rem;
+            box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .card_content {
+            padding: 2rem;
+            background: #014D7B;
+        }
+
+        .card_title {
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+            margin: 0px;
+        }
+
+        .card_text {
+            color: #ffffff;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin-bottom: 1.25rem;
+            font-weight: 400;
+        }
+
+        .made_by {
+            font-weight: 400;
+            font-size: 13px;
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .hdblog{
+  font-family: DM Sans;
+  font-style: normal;
+  /* font-weight: 500; */
+  font-size: 54px;
+  line-height: 121%;
+  text-align: center;
+  color: #013758;
+}
+@media (max-width: 576px){
+    .hdblog{
+  font-family: DM Sans;
+  font-style: normal;
+  /* font-weight: 500; */
+  font-size: 24px;
+  line-height: 121%;
+  text-align: center;
+  color: #013758;
+}
+        }    
+
+    </style>
+</head>
+
+<body >
+    <!-- SECTION1 -->
+    <div id="grad1">
+        <div class="container1" style="background: #FDFAFA;">
+
+            <nav class="navbar navbar-expand-lg navbar-light " style=" background-color:#FDFAFA;">
+                <div class="container-fluid">
+                    <span style="margin-left: 1rem;">
+                        <a class="navbar-brand" href="/index.html"><img src="image/Logo_png.png" alt="..."></a>
+                        <a class="navbar-brand" href="/index.html"><img src="image/Logo_Text.png" alt="..."></a></span>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin: 2vw;">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="color: blue!important;">
+                            <li class="nav-item">
+                               <a class="nav-link active nav1" style="color: #013758;"  aria-current="page" href="/about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                               <a class="nav-link active nav1" style="color: #013758;"  href="/technology.html">Technology</a>
+                            </li>
+                            <li class="nav-item">
+                               <a class="nav-link active nav1" style="color: #013758;"  href="/product.html">Product</a>
+                            </li>
+                            <li class="nav-item">
+                               <a class="nav-link active nav1" style="color: #013758;"   href="/sdg.html">SDG</a>
+                            </li>
+                            <li class="nav-item">
+                               <a class="nav-link active nav1" style="color: #013758;"  href="/blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                               <a class="nav-link active nav2" style="color: #013758;"   href="/contact.html">Contact</a>
+                            </li>
+                         </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="Fut"> <b>About</b></div>
+             </div>
+    </div>
+    <div class="container">
+    <div class="main">
+        <h1 class="hdblog">Where can I get some Lorem Ipsum
+            There are many variations of passages of Lorem Ipsum </h1>
+        <ul class="cards">
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Card Grid Layout</h2>
+                      
+                    </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img src="https://picsum.photos/500/300/?image=5"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Card Grid Layout</h2>
+                   
+                    </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img src="https://picsum.photos/500/300/?image=11"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Card Grid Layout</h2>
+             
+                    </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img src="https://picsum.photos/500/300/?image=14"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Card Grid Layout</h2>
+                     
+                    </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img src="https://picsum.photos/500/300/?image=17"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Card Grid Layout</h2>
+                     
+                    </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img src="https://picsum.photos/500/300/?image=2"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Card Grid Layout</h2>
+                   
+                    </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Card Grid Layout</h2>
+                     
+                    </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img src="https://picsum.photos/500/300/?image=5"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Card Grid Layout</h2>
+                   
+                    </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img src="https://picsum.photos/500/300/?image=11"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Card Grid Layout</h2>
+                      
+                    </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img src="https://picsum.photos/500/300/?image=14"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Card Grid Layout</h2>
+               
+                    </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img src="https://picsum.photos/500/300/?image=17"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Card Grid Layout</h2>
+                      
+                    </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img src="https://picsum.photos/500/300/?image=2"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Card Grid Layout</h2>
+                      
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+      <!-- =================footer -->
+      <div
+         style="padding-bottom: 2rem;background: linear-gradient(225.52deg, #03738C 0.45%, #024873 32.22%, #012840 100.47%); ;">
+         <div class="fut">Phrotons Mobility - A Fuel Proof Plan</div>
+         <hr>
+         <div class="container">
+            <div class="row alignment">
+               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" style="color: white;padding: 3vw;">
+                <div class="fut1" >Contact with
+                  Us
+               </div>
+                 <br>
+                  <div style="margin: auto;">
+                  <i class="fa fa-facebook-f" style="font-size:24px    ; margin-right: 1vw;">  </i>
+                  <i class="fa fa-twitter" style="font-size:24px;    margin-right: 1vw;">  </i>
+                  <i class="fa fa-instagram" style="font-size:24px ;    margin-right: 1vw;">  </i>
+                </div>
+         
+               </div>
+               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 pad1">
+                  <div class="fut1" >Contact
+                  Us</div><br>
+                  <div class="fut1">91
+                  -7875504566</div>
+                   <div class="fut1">91
+                  -9049522690</div><br>
+                  <div class="fut1">Mail
+                  Id</div>
+                  <div class="fut1"
+                    >contact@phrotons.com
+                  </div>
+                  <div class="fut1">
+                  sales.purchase@phrotons.com
+                  </div>
+               </div>
+               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 fut2" style="padding: 3vw;">
+                   <div class="fut1"
+                    >Address</div>
+                  <div class="fut1" style="color: white;">Ground
+                  Floor, 513, Building 14 (SN 37/2/2B), Mahada Colony, Yashwant Nagar, Kharadi, Pune, Maharashtra
+                  411014</div>
+               </div>
+               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 pad">
+                  <span class="fut1">Imp
+                  inks</span><br><br>
+                  <span class="fut1"
+                     href="/profile.html">About</span> <br>
+                  <span class="fut1"
+                     href="/product-category.html">Technology</span> <br>
+                  <span class="fut1"
+                     href="/contact.html">Product</span> <br>
+                  <span class="fut1"
+                     href="/contact.html">SDG</a> <br>
+               </div>
+            </div>
+         </div>
+      </div>
+
+</body>
+
+</html>
