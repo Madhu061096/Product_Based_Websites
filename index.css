@@ -35,6 +35,8 @@
 }
 
 
+
+
 .txt{
   font-family: 'DM Sans', sans-serif;
   font-style: normal;
@@ -555,6 +557,32 @@ padding: 4vw;
 }
 
 
+.nav1{
+  color: #37566B;
+  /* font-family: DM Sans; */
+  font-style: normal;
+  /* font-weight: bold; */
+  font-size: 1.4vw;
+  line-height: 20px;
+  /* identical to box height */
+  letter-spacing: -0.376923px;margin-right: 3vw;
+  
+}
+
+.nav2{
+color: white!important;
+ 
+  font-style: normal;
+
+  font-size: 1.4vw;
+  line-height: 20px;
+
+  letter-spacing: -0.376923px;
+  margin-right: 3vw;
+  background: #28697F;
+  border-radius: 0px 13px 0px 0px;
+  
+}
 
 .nav1{
   color: #37566B;
@@ -640,3 +668,15 @@ width: 45%;
     width: 32%;
   }
 } */
+ 
+.tab{
+  width: 80%!important;
+  border-radius: 25px;
+ height: max-content!important;
+}
+
+@media (max-width: 768px){
+  .tab {
+  height: max-content;
+  }
+} 

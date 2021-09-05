@@ -12,7 +12,7 @@
       <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,500&display=swap"> -->
       <link href="//db.onlinewebfonts.com/c/f867300bdd5bc759c50209b13c385cb1?family=Schluber" rel="stylesheet"
          type="text/css" />
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <!-- <link href="FontAwesome.css" rel="stylesheet"> -->
       <link rel="stylesheet"
          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css" />
@@ -46,6 +46,7 @@
          position: relative;
          height: 100%;
          }
+
          body {
          /* background: #eee; */
          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -54,32 +55,33 @@
          margin: 0;
          padding: 0;
          }
+
          .swiper {
          width: 62%;
          padding-top: 50px;
          padding-bottom: 50px;
          }
-         
-         @media (max-width: 576px){
-            .swiper {
-         width: 83%;
-         padding-top: 50px;
-         padding-bottom: 50px;
-      
-         }}
 
-         
+         @media (max-width: 576px) {
+         .swiper {
+            width: 83%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+         }
+         }
+
          .swiper-slide {
          background-position: center;
          background-size: cover;
          width: 300px;
          height: 300px;
          }
+
          .swiper-slide img {
          display: block;
          width: 100%;
          }
-        
+
          .card {
          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
          transition: 0.3s;
@@ -88,26 +90,49 @@
          object-fit: cover;
          background-color: white;
          }
+
+
          /*flipper css starts here*/
-         .flipperImg{
-         width:100%; background-color:  #C5E9FF;    border-radius: 25px 25px 0px 0px;
+
+         .flipperImg {
+         width: 100%;
+         background-color: #C5E9FF;
+         border-radius: 25px 25px 0px 0px;
          }
-         .flipperText{
+
+         .flipperText {
+         padding: 16px;
          font-family: DM Sans;
-         font-style: normal;            
-         font-size: 24px;
-         line-height: 31px;
-         letter-spacing: -0.603077px;            
+         font-style: normal;
+         font-size: 2vw;
+         line-height: 23px;
+         letter-spacing: -0.603077px;
          color: #0367A6;
          }
+
+         @media (max-width: 576px) {
+         .flipperText {
+            font-family: DM Sans;
+            font-style: normal;
+            font-size: 7.3vw;
+            line-height: 23px;
+            letter-spacing: -0.603077px;
+            color: #0367A6;
+         }
+         }
+
          .flip-card {
          background-color: transparent;
          width: 100%;
          height: 27vw;
          /* border: 1px solid #f1f1f1; */
-         perspective: 1000px; /* Remove this if you don't want the 3D effect */
+         perspective: 1000px;
+         /* Remove this if you don't want the 3D effect */
          }
+
+
          /* This container is needed to position the front and back side */
+
          .flip-card-inner {
          position: relative;
          width: 100%;
@@ -116,79 +141,143 @@
          transition: transform 0.8s;
          transform-style: preserve-3d;
          }
+
+
          /* Do an horizontal flip when you move the mouse over the flip box container */
+
          .flip-card:hover .flip-card-inner {
          transform: rotateY(180deg);
          }
+
+
          /* Position the front and back side */
-         .flip-card-front, .flip-card-back {
+
+         .flip-card-front,
+         .flip-card-back {
          position: absolute;
          width: 100%;
          height: 27vw;
-         -webkit-backface-visibility: hidden; /* Safari */
+         -webkit-backface-visibility: hidden;
+         /* Safari */
          backface-visibility: hidden;
          }
+
+
          /* Style the front side (fallback if image is missing) */
+
          .flip-card-front {
          background-color: #fff;
          color: black;
          border-radius: 25px;
          }
+
+
          /* Style the back side */
+
+         .flip-card-back {
+         background-color: rgba(77, 111, 122, 0.7);
+         transform: rotateY( 180deg);
+         border-radius: 25px;
+         /* text-align: center; */
+         /* align-items: center; */
+         padding: 4vw;
+         font-family: DM Sans;
+         font-style: italic;
+         font-weight: 500;
+         font-size: 1.2vw;
+         line-height: 2vw;
+         letter-spacing: 0.396923px;
+         color: #FFFFFF;
+         width: 100%;
+         height: 27vw;
+         }
+
+         @media (max-width: 576px) {
          .flip-card-back {
             background-color: rgba(77, 111, 122, 0.7);
-    transform: rotateY( 
-180deg);
-    border-radius: 25px;
-    /* text-align: center; */
-    /* align-items: center; */
-    padding: 4vw;
-    font-family: DM Sans;
-    font-style: italic;
-    font-weight: 500;
-    font-size: 1vw;
-    line-height: 31px;
-    letter-spacing: 0.396923px;
-    color: #FFFFFF;
-}
-
-
-@media (max-width: 576px){
-      .flip-card-back {
-       
-    width: 100%;
-    height: 70%;
-    font-size: 5vw;
-    perspective: 1000px;
-    padding: 6vw;
-    margin: auto;
-    line-height: 20px;
-      }
-  }
-
-
-
-@media (max-width: 576px){
-      .flip-card {
-         background-color: transparent;
-    width: 100%;
-    height: 100vw;
-    /* border: 1px solid #f1f1f1; */
-    perspective: 1000px;
-    /* left: -1%; */
-    /* margin: 11vw; */
-      }
-  }
-
-
-
-.card{
-background-color: transparent;
-box-shadow: none!important;
-border: none;
-margin: auto;
+            transform: rotateY( 180deg);
+            border-radius: 25px;
+            text-align: center;
+            align-items: center;
+            padding: 4vw;
+            font-family: DM Sans;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 4.8vw;
+            line-height: 8vw;
+            letter-spacing: 0.396923px;
+            color: #FFFFFF;
+            width: 100%;
+            height: 85vw;
          }
- 
+         }
+
+         @media (max-width: 576px) {
+         .flip-card {
+            background-color: transparent;
+            width: 100%;
+            height: 100vw;
+         }
+         .containerText {
+            background: #fff;
+            background: #fff;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+         }
+         }
+
+         .card {
+         background-color: transparent;
+         box-shadow: none!important;
+         border: none;
+         margin: auto;
+         }
+
+         @media (min-width: 576px) and (max-width: 991px) {
+         .flip-card {
+            height: 80vw;
+         }
+         .flipperText {
+            font-size: 4vw;
+         }
+         .flip-card-back {
+            font-size: 3.5vw;
+            line-height: 6vw;
+            height: 70vw;
+         }
+         .containerText {
+            background: #fff;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+         }
+         }
+
+         .swiper-slide-prev{
+            transform: translate3d(0px, 0px, -200px) rotateX(0deg) rotateY(60deg) scale(0.8) !important;
+         }
+         .swiper-slide-next{
+            transform: translate3d(0px, 0px, -180px) rotateX(0deg) rotateY(-60deg) scale(0.8) !important;
+         }
+
+         .overlay {
+            position: absolute;
+            border-radius: 15px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 0;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+            transition: .5s ease;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.815)
+         }
+         .overlay h4{
+            margin-top: 20%;
+
+         }
       </style>
    </head>
    <body>
@@ -235,13 +324,13 @@ margin: auto;
          </div>
          <div style="padding: 3vw;">
             <div class="row hed" style="padding-top: 7vw;">
-               <div class="col-lg-6 col-sm-12 txt mobile-txt">
+               <div class="col-lg-6 col-md-6 col-sm-12 txt mobile-txt">
                   Reducing Carbon Footprints,
                   One Hydrogen atom at a
                   time.
                </div>
-               <div class="col-lg-6 col-sm-12">
-                  <img class="image" src="/image/Banner_Atom (2).png" alt="">
+               <div class="col-lg-6 col-md-6 col-sm-12">
+                  <img class="image" src="./image/Banner_Atom (3).png" alt="">
                </div>
             </div>
          </div>
@@ -252,7 +341,7 @@ margin: auto;
             <div class="col-lg-6 col-sm-12">
                <img class="image" style="border-radius: 0px 85px 85px 0px;" src="./image/About_2.png" alt="">
             </div>
-            <div class="col-lg-6 col-sm-12 container">
+            <div class="col-lg-6 col-md-6 col-sm-12 container">
                <h1 class="texting">About Us </h1>
                <p class="text1">Team Phrotons is dedicated to harnessing clean energy from the most abundant element in
                   the universe; Hydrogen. We have developed our in-house Hydrogen Fuel Cell and other supporting
@@ -264,7 +353,8 @@ margin: auto;
                <button class="w3-button w3-right w3-green butn">Learn more &raquo;</button>
             </div>
          </div>
-      </div> <br>
+      </div>
+      <br>
       <!-- SECTION3 -->
       <div id="grad2">
          <div>
@@ -272,66 +362,62 @@ margin: auto;
          </div>
          <div class="container">
             <div class="row">
-               <div class="col-lg-4 col-sm-12">
+               <div class="col-lg-4 col-md-12 col-sm-12">
                   <div class="card" style="width: 80%;border-radius: 25px;
                      height: 97%;">
                      <div class="flip-card">
                         <div class="flip-card-inner">
                            <div class="flip-card-front">
-                              <img src="/image/POWER_HOUSE_HFC_RENDER_4K (1).png" class="flipperImg" alt="Avatar" >
-                              <div class="container">
+                              <img src="./image/POWER_HOUSE_HFC_RENDER_4K (2).png" class="flipperImg" alt="Avatar" >
+                              <div class="containerText">
                                  <h4 class="flipperText">Fuel Cell</h4>
                               </div>
                            </div>
                            <div class="flip-card-back">
-                           
                               <p class="crdt">The most promising emerging green energy source.
-
-                                Hydrogen Fuel Cell generates electricity through an electrochemical reaction between stored hydrogen, and the atmospheric oxygen, where the only byproduct is clean water. 
-                                </p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div><br>
-               <div class="col-lg-4 col-sm-12">
-                  <div class="card" style="width: 80%;border-radius: 25px;
-                     height: 97%;">
-                     <div class="flip-card">
-                        <div class="flip-card-inner">
-                           <div class="flip-card-front">
-                              <img src="/image/POWER_HOUSE_POWER_CONTROLLER_RENDER_4K (1).png" class="flipperImg" alt="Avatar" >
-                              <div class="container">
-                                 <h4 class="flipperText">Power Control</h4>
-                              </div>
-                           </div>
-                           <div class="flip-card-back">
-                            
-                              <p>With great powers comes great responsibilities.
-
-                                Our specifically designed Power Control unit manages the entire energy generation and storage unit. 
-                                </p>
+                                 Hydrogen Fuel Cell generates electricity through an electrochemical reaction between stored hydrogen, and the atmospheric oxygen, where the only byproduct is clean water. 
+                              </p>
                            </div>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="col-lg-4 col-sm-12">
+               <br>
+               <div class="col-lg-4 col-md-12 col-sm-12">
                   <div class="card" style="width: 80%;border-radius: 25px;
                      height: 97%;">
                      <div class="flip-card">
                         <div class="flip-card-inner">
                            <div class="flip-card-front">
-                              <img src="/image/POWER_HOUSE_COOLING_RENDER_4K (1).png" class="flipperImg" alt="Avatar" >
-                              <div class="container">
+                              <img src="./image/POWER_HOUSE_POWER_CONTROLLER_RENDER_4K (2).png" class="flipperImg" alt="Avatar" >
+                              <div class="containerText">
+                                 <h4 class="flipperText">Power Control</h4>
+                              </div>
+                           </div>
+                           <div class="flip-card-back">
+                              <p>With great powers comes great responsibilities.
+                                 Our specifically designed Power Control unit manages the entire energy generation and storage unit. 
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-12 col-sm-12">
+                  <div class="card" style="width: 80%;border-radius: 25px;
+                     height: 97%;">
+                     <div class="flip-card">
+                        <div class="flip-card-inner">
+                           <div class="flip-card-front">
+                              <img src="./image/POWER_HOUSE_COOLING_RENDER_4K (2).png" class="flipperImg" alt="Avatar" >
+                              <div class="containerText">
                                  <h4 class="flipperText">Thermal Management</h4>
                               </div>
                            </div>
                            <div class="flip-card-back">
-                           
                               <p>Ok cool down.
-
-                                Thermal management system developed at Phrotons Mobility ensures adequate cooling of the entire system. It can also be used independently in other electronic cooling applications.</p>
+                                 Thermal management system developed at Phrotons Mobility ensures adequate cooling of the entire system. It can also be used independently in other electronic cooling applications.
+                              </p>
                            </div>
                         </div>
                      </div>
@@ -341,45 +427,41 @@ margin: auto;
          </div>
          <div class="container">
             <div class="row">
-               <div class="col-lg-4 col-sm-12">
+               <div class="col-lg-4 col-md-12 col-sm-12">
                   <div class="card" style="width: 80%;border-radius: 25px;
                      height: 97%;">
                      <div class="flip-card">
                         <div class="flip-card-inner">
                            <div class="flip-card-front">
-                              <img src="/image/POWER_HOUSE_HYDROCORE_RENDER_4K (2).png" class="flipperImg" alt="Avatar" >
-                              <div class="container">
+                              <img src="./image/POWER_HOUSE_HYDROCORE_RENDER_4K (3).png" class="flipperImg" alt="Avatar" >
+                              <div class="containerText">
                                  <h4 class="flipperText">Hydrogen Storage</h4>
                               </div>
                            </div>
                            <div class="flip-card-back">
-                            
                               <p>Store more is at our core.
-
                                  Our storage system reduces the storage volume of hydrogen by around 20 times. This serves in developing a compact assembly and hence a lighter system.
-                                 </p>
+                              </p>
                            </div>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="col-lg-4 col-sm-12">
+               <div class="col-lg-4 col-md-12 col-sm-12">
                   <div class="card" style="width: 80%;border-radius: 25px;
                      height: 97%;">
                      <div class="flip-card">
                         <div class="flip-card-inner">
                            <div class="flip-card-front">
-                              <img src="/image/Green hydrogen.png" class="flipperImg" alt="Avatar" >
-                              <div class="container">
+                              <img src="./image/Green hydrogen (2).png" class="flipperImg" alt="Avatar" >
+                              <div class="containerText">
                                  <h4 class="flipperText">Green Hydrogen</h4>
                               </div>
                            </div>
                            <div class="flip-card-back">
-                              
                               <p>Can we ever have enough green?
-
                                  We produce green Hydrogen as part of the National Hydrogen Mission emphasised by PM Modi. This hydrogen fuels the cleanest energy generation systems.
-                                 </p>
+                              </p>
                            </div>
                         </div>
                      </div>
@@ -392,83 +474,86 @@ margin: auto;
       <br><br>
       <div class="container" style="background: white;">
          <div data-aos="fade-up" class="row">
-            <div class="col-lg-6 col-sm-12 container ">
+            <div class="col-lg-6 col-md-12 col-sm-12 container ">
                <h1 class="texting">Why Us</h1>
-               <p class="text1">Our team is certified by BSI for ISO 9001:2015 for Quality Management Systems, ISO
-                  14001:2015 for Environmental Management Systems, and ISO 45001:2018 for Occupational Health and
-                  Safety Management Systems.
-                  We are also certified with UNITAR, UNSIAP, and UNEP for Environmental Sustainable Development Goals
+               <p class="text1"> We are doing R&D to explore cheap catalyst & we have 2 year cost reduction plan to cut down the cost of technology by 70%
+                  We are certified with UNITAR, UNSIAP, and UNEP for Environmental Sustainable Development Goals
                   Indicators.
                </p>
             </div>
-            <div class="col-lg-6 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-12">
                <img class="image" style="border-radius:85px 0px 0px 85px;" 
-                  src="/image/silhouette-confident-businesspeople.jpg" alt="">
+                  src="./image/silhouette-confident-businesspeople (1).jpg" alt="">
             </div>
          </div>
       </div>
       <br><br>
       <!-- ================================ -->
       <!-- Swiper -->
-      <div class="swiper mySwiper" style="background: white;">
-         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-               <div class="container-y">
-                  <div class="info">
-                     <p class="info_text">It was literally transformative to discover Phrotons Mobility, who could
-                        help us with thermal management system for our onsite power generation unit 
-                     </p>
-                  </div>
-                  <di class="container__profile">
-                     <img src="/image/Screenshot_2021-09-01-10-42-00-91_7352322957d4404136654ef4adb64504.jpg"
-                        alt="people" />
-                     <div class="container__profile__text">
-                        <h2 style="color: white;">Shradha Lambate
-                        </h2>
-                        <p><b>Rustee</b></p>
-                     </div>
-                  </di>
-               </div>
-            </div>
-            <div class="swiper-slide">
-               <div class="container-y">
-                  <div class="info">
-                     <p class="info_text">We have had the pleasure to work with Phrotons Mobility for our electric
-                        bike units. Their products and client service is worth appreciating.
-                     </p>
-                  </div>
-                  <di class="container__profile">
-                     <img src="/image/50ce24fbc72443f11672081f50a9464c.jpg" alt="people" />
-                     <div class="container__profile__text">
-                        <h2 style="color: white;">Parvez Patel
-                        </h2>
-                        <p><b>Ezee Bikes, Pune
-                           </b>
+      <div class="container">
+         <h1 class="texting"style="text-align: center;">Testimonial</h1>
+         <div class="swiper mySwiper" style="background: white;">
+            <div class="swiper-wrapper">
+               <div data-aos="zoom-in-up" class="swiper-slide">
+                  <div class="container-y">
+                     <div class="info">
+                        <p class="info_text">It was literally transformative to discover Phrotons Mobility, who could
+                           help us with thermal management system for our onsite power generation unit 
                         </p>
                      </div>
-                  </di>
-               </div>
-            </div>
-            <div class="swiper-slide">
-               <div class="container-y">
-                  <div class="info">
-                     <p class="info_text">Great energy in the management team. Queries were resolved quickly and
-                        timelines were met every time.
-                     </p>
+                     <di class="container__profile">
+                        <div class="overlay">
+                           <h4>overlay text will be show here, please update text</h4>
+                        </div>
+                        <img src="./image/Screenshot_2021-09-01-10-42-00-91_7352322957d4404136654ef4adb64504.jpg"
+                           alt="people" />
+                        <div class="container__profile__text">
+                           <h2 style="color: white;">Shradha Lambate
+                           </h2>
+                           <p><b>Rustee</b></p>
+                        </div>
+                     </di>
                   </div>
-                  <di class="container__profile">
-                     <img src="/image/6af6cf93d71997087b67b209c7b00774.jpg" alt="people" />
-                     <div class="container__profile__text">
-                        <h2 style="color: white;">Lara Madrigal</h2>
-                        <p><b>Client</b></p>
+               </div>
+               <div data-aos="zoom-in-up" class="swiper-slide">
+                  <div class="container-y">
+                     <div class="info">
+                        <p class="info_text">We have had the pleasure to work with Phrotons Mobility for our electric
+                           bike units. Their products and client service is worth appreciating.
+                        </p>
                      </div>
-                  </di>
+                     <di class="container__profile">
+                        <img src="./image/50ce24fbc72443f11672081f50a9464c.jpg" alt="people" />
+                        <div class="container__profile__text">
+                           <h2 style="color: white;">Parvez Patel
+                           </h2>
+                           <p><b>Ezee Bikes, Pune
+                              </b>
+                           </p>
+                        </div>
+                     </di>
+                  </div>
+               </div>
+               <div data-aos="zoom-in-up" class="swiper-slide">
+                  <div class="container-y">
+                     <div class="info">
+                        <p class="info_text">Great energy in the management team. Queries were resolved quickly and
+                           timelines were met every time.
+                        </p>
+                     </div>
+                     <di class="container__profile">
+                        <img src="./image/6af6cf93d71997087b67b209c7b00774.jpg" alt="people" />
+                        <div class="container__profile__text">
+                           <h2 style="color: white;">Lara Madrigal</h2>
+                           <p><b>Client</b></p>
+                        </div>
+                     </di>
+                  </div>
                </div>
             </div>
          </div>
       </div>
       <br>
-
       <!-- =================footer -->
       <div
          style="padding-bottom: 2rem;background: linear-gradient(225.52deg, #03738C 0.45%, #024873 32.22%, #012840 100.47%); ;">
@@ -477,39 +562,45 @@ margin: auto;
          <div class="container">
             <div class="row alignment">
                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" style="color: white;padding: 3vw;">
-                <div class="fut1" >Contact with
-                  Us
-               </div>
-                 <br>
+                  <div class="fut1" >Contact with
+                     Us
+                  </div>
+                  <br>
                   <div style="margin: auto;">
-                  <i class="fa fa-facebook-f" style="font-size:24px    ; margin-right: 1vw;">  </i>
-                  <i class="fa fa-twitter" style="font-size:24px;    margin-right: 1vw;">  </i>
-                  <i class="fa fa-instagram" style="font-size:24px ;    margin-right: 1vw;">  </i>
-                </div>
-         
+                     <i class="fa fa-facebook-f" style="font-size:24px    ; margin-right: 1vw;">  </i>
+                     <i class="fa fa-twitter" style="font-size:24px;    margin-right: 1vw;">  </i>
+                     <i class="fa fa-instagram" style="font-size:24px ;    margin-right: 1vw;">  </i>
+                  </div>
                </div>
                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 pad1">
                   <div class="fut1" >Contact
-                  Us</div><br>
+                     Us
+                  </div>
+                  <br>
                   <div class="fut1">91
-                  -7875504566</div>
-                   <div class="fut1">91
-                  -9049522690</div><br>
+                     -7875504566
+                  </div>
+                  <div class="fut1">91
+                     -9049522690
+                  </div>
+                  <br>
                   <div class="fut1">Mail
-                  Id</div>
+                     Id
+                  </div>
                   <div class="fut1"
-                    >contact@phrotons.com
+                     >contact@phrotons.com
                   </div>
                   <div class="fut1">
-                  sales.purchase@phrotons.com
+                     sales.purchase@phrotons.com
                   </div>
                </div>
                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 fut2" style="padding: 3vw;">
-                   <div class="fut1"
-                    >Address</div>
+                  <div class="fut1"
+                     >Address</div>
                   <div class="fut1" style="color: white;">Ground
-                  Floor, 513, Building 14 (SN 37/2/2B), Mahada Colony, Yashwant Nagar, Kharadi, Pune, Maharashtra
-                  411014</div>
+                     Floor, 513, Building 14 (SN 37/2/2B), Mahada Colony, Yashwant Nagar, Kharadi, Pune, Maharashtra
+                     411014
+                  </div>
                </div>
                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 pad">
                   <span class="fut1">Imp
@@ -555,6 +646,7 @@ margin: auto;
              pagination: {
                  el: ".swiper-pagination",
              },
+        
          });
       </script>
    </body>
